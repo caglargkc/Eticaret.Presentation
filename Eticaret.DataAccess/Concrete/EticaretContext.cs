@@ -11,12 +11,9 @@ namespace Eticaret.DataAccess.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //185.242.162.113
-            //db1_otel
-            //db1_otel
-            //Abc123@@
 
-            optionsBuilder.UseSqlServer("Data Source=185.242.162.113;Initial Catalog=db1_otel;User ID=db1_otel;Password=Abc123@@");
+
+            optionsBuilder.UseSqlServer("Data Source=?;Initial Catalog=?;User ID=?;Password=?");
         }
         public DbSet<User> Users {get;set;}
         public DbSet<UserToken> UserTokens {get;set; }
